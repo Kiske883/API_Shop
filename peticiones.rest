@@ -1,0 +1,32 @@
+@HOST = http://localhost:3000
+
+GET {{HOST}}/api/products
+
+###
+GET {{HOST}}/api/products/cat/oficina
+
+###
+POST {{HOST}}/api/products
+Content-Type: application/json
+
+{
+    "name": "lapiz verde",
+    "description": "Pinta en un color verde muy bonito",
+    "price": 12,
+    "category": "oficina",
+    "stock": 150,
+    "available": true
+}
+
+###
+PUT {{HOST}}/api/products/691cbd6344bf4e4b306ebd05
+Content-Type: application/json
+
+{
+    "name": "lapiz rojo",
+    "description": "Pinta en un color verde muy bonito",
+    "price": 12,
+    "category": "taller",
+    "stock": 150,
+    "available": true
+}

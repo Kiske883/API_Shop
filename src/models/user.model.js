@@ -3,13 +3,11 @@ import { Schema, model } from "mongoose";
 // Filosifia Fat Model, skinny controller
 // En definitiva un model bien gordo de funcionalidad y un controlador lo mas sencillo posible
 
-const productSchema = new Schema({
-    name: String,
-    description: String,
-    price: Number,
-    category: String,
-    stock: Number,
-    available: Boolean
+const userSchema = new Schema({
+    username: String,
+    email: String,
+    password: String,
+    role:String
 },{
     // Cuando hacemos un create en mongodb, nos crea un campo v__, que contiene un numero que sería la version
     // para eliminarlo pq relamente no se utiliza tenemos q ue hacer versionkey, además con timestamps nos añade 
@@ -18,10 +16,6 @@ const productSchema = new Schema({
 }
 );
 
-const Product = model('product', productSchema);
+const User = model('user', userSchema);
 
-
-
-export default Product ; 
-
-
+export default User ; 

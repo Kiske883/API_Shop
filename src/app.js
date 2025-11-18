@@ -1,5 +1,6 @@
 // Creation and configuration of the Express APP
 import express from 'express';
+import apiRoutes from './routes/api.routes.js' ;
 
 
 const app = express();
@@ -10,6 +11,8 @@ app.use(express.json());
 // Example:
 // import apiRoutes from './routes/api.routes.js';
 // app.use('/api', apiRoutes);
+
+app.use('/api', apiRoutes);
 
 // 404 handler
 app.use((req, res, next) => {
