@@ -1,0 +1,19 @@
+{
+  "name": "05_api-shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "mongoose": "^8.19.3"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}
